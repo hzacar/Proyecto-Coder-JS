@@ -1,36 +1,35 @@
-let numero = parseInt(prompt("Adivina el número. Pista: es entre 1 y 4"));
-let adivinar = 1
-while (numero != 'ESC') {
-    switch (numero) {
-        case (numero = adivinar):
-            alert (`¡¡Felicitaciones ${numero} es el número secreto!!`);
-            break;
-        case (numero = 3):
-            alert (`${numero} no es el número secreto. Seguí intentando`);
-            break;
-        case (numero = 2):
-            alert (`${numero} no es el número secreto. Seguí intentando`);
-            break;
-        case (numero = 4):
-            alert (`${numero} no es el número secreto. Seguí intentando`);
-            break;
-        default:
-            alert ("Fuera del rango")
-    }
-    numero = parseInt(prompt("Adivina el número. Pista: es entre 1 y 20"));
+/* function impuesto(precio, porcentaje){
+    return precio + ((precio * porcentaje)/100)
 }
+for (let index = 0; index < 5; index++) {
+    let resultado = impuesto(parseFloat(prompt("INGRESAR PRECIO")),parseFloat(prompt("INGRESAR %")));
+    alert(resultado);
+} */
+//filtro precios
 
-
-
+let productoA = 20000;
+let productoB = 15000;
+let productoC = 19000;
+let cuotas = prompt("ELEGIR CANTIDAD DE CUOTAS");
+let precio = prompt("USTED VA A LLEVR EL PRODUCTO A, B O C?");
+function cuota(precio,cuotas){
+return precio/cuotas
+}
+switch(precio){
+    case "A":
+        let resultadoa = cuota (productoA,cuotas).toFixed(2);
+        alert (`DEBE ABONAR ${cuotas} CUOTAS MENSUALES DE $${resultadoa}`);
+        break;
+    case "B":
+        let resultadob = cuota (productoB,cuotas).toFixed(2);
+        alert (`DEBE ABONAR ${cuotas} CUOTAS MENSUALES DE $${resultadob}`);
+        break;    
+    case "C":
+        let resultadoc = cuota (productoC,cuotas).toFixed(2);
+        alert (`DEBE ABONAR ${cuotas} CUOTAS MENSUALES DE $${resultadoc}`);
+        break;    
     
-   
-    /* let respuesta2 = `${respuesta} es un número inválido. Perdieste una oportunidad`;
-    alert (respuesta2);
-    else
-    if(respuesta===17){ */
-       /*  let ganador = `${respuesta} es el número correcto. Felicitaciones`
-        console.log (ganador);
-        break
-    } */
-
-/* alert ("fin") */
+    default:
+        alert ("ACTUALICE LA PAGINA E INGRESE A, B O C POR FAVOR");
+        break;
+}
