@@ -1,31 +1,35 @@
-/* function impuesto(precio, porcentaje){
-    return precio + ((precio * porcentaje)/100)
+class Producto{
+    constructor(nombre, precio, descripcion){
+        this.nombre = nombre;
+        this.precio = precio;
+        this.descripcion = descripcion;
+    }
 }
-for (let index = 0; index < 5; index++) {
-    let resultado = impuesto(parseFloat(prompt("INGRESAR PRECIO")),parseFloat(prompt("INGRESAR %")));
-    alert(resultado);
-} */
-//filtro precios
+let productos = [];
+productos.push(new Producto("productoA", 20000, "descripcionA"))
+productos.push(new Producto("productoB", 15000, "descripcionB"))
+productos.push(new Producto("productoC", 19000, "descripcionC"))
 
-let productoA = 20000;
+
+/* let productoA = 20000;
 let productoB = 15000;
-let productoC = 19000;
+let productoC = 19000; */
 let cuotas = prompt("ELEGIR CANTIDAD DE CUOTAS");
-let precio = prompt("USTED VA A LLEVR EL PRODUCTO A, B O C?");
-function cuota(precio,cuotas){
-return precio/cuotas
+let mensual = prompt("USTED VA A LLEVR EL PRODUCTO A, B O C?");
+function cuota(mensual,cuotas){
+return mensual/cuotas
 }
-switch(precio){
+switch(mensual){
     case "A":
-        let resultadoa = cuota (productoA,cuotas).toFixed(2);
+        let resultadoa = cuota (productos[0].precio,cuotas).toFixed(2);
         alert (`DEBE ABONAR ${cuotas} CUOTAS MENSUALES DE $${resultadoa}`);
         break;
     case "B":
-        let resultadob = cuota (productoB,cuotas).toFixed(2);
+        let resultadob = cuota (productos[1].precio,cuotas).toFixed(2);
         alert (`DEBE ABONAR ${cuotas} CUOTAS MENSUALES DE $${resultadob}`);
         break;    
     case "C":
-        let resultadoc = cuota (productoC,cuotas).toFixed(2);
+        let resultadoc = cuota (productos[2].precio,cuotas).toFixed(2);
         alert (`DEBE ABONAR ${cuotas} CUOTAS MENSUALES DE $${resultadoc}`);
         break;    
     
