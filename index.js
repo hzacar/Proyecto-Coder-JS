@@ -1,4 +1,4 @@
-class Producto{
+/* class Producto{
     constructor(nombre, precio, descripcion){
         this.nombre = nombre;
         this.precio = precio;
@@ -9,12 +9,9 @@ let productos = [];
 productos.push(new Producto("productoA", 20000, "descripcionA"))
 productos.push(new Producto("productoB", 15000, "descripcionB"))
 productos.push(new Producto("productoC", 19000, "descripcionC"))
+ */
 
-
-let productoA = 20000;
-let productoB = 15000;
-let productoC = 19000;
-let cuotas = prompt("ELEGIR CANTIDAD DE CUOTAS");
+/* let cuotas = prompt("ELEGIR CANTIDAD DE CUOTAS");
 let mensual = prompt("USTED VA A LLEVR EL PRODUCTO A, B O C?");
 function cuota(mensual,cuotas){
 return mensual/cuotas
@@ -36,22 +33,32 @@ switch(mensual){
     default:
         alert ("ACTUALICE LA PAGINA E INGRESE A, B O C POR FAVOR");
         break;
-}
+} */
 
-/* let card = document.getElementById("contenedor");
+let card = document.getElementById("contenedor");
 let productos = [
-  { id: 1, nombre: "cortina ducha", precio: 1000 },
-  { id: 2, nombre: "cortina sillon", precio: 700 },
-  { id: 3, nombre: "cortina familia", precio: 500 },
+  { img: "//simpducha.jpg", nombre: "cortina ducha", precio: 1000, descripcion: "Cortina de baño tela teflonada" },
+  { img: "//simpsillon.jpg", nombre: "cortina sillon", precio: 700, descripcion: "Cortina de baño tela teflonada" },
+  { img: "//simpfamilia.jpg", nombre: "cortina familia", precio: 500, descripcion: "Cortina de baño tela teflonada" },
 ];
 
 productos.forEach((producto) => {
   let item = document.createElement("div");
-  item.innerHTML = `
-    <h3>Id: ${producto.id}</h3>
-    <h4>Producto: ${producto.nombre}</h4>
-    <p>$${producto.precio}</p>
+  item.innerHTML= `
+  <div class="card col-md-3 prod" style="width: 18rem;">
+      <img src="img${producto.img}" class="card-img-top" alt="cortina de baño modelo simpson ducha">
+      <div  class="card-body">
+      <h3 class="card-title">$${producto.precio}</h3>
+      <h4 class="card-subtitle">${producto.nombre}</h4>
+      <p class="card-text">${producto.descripcion}</p>
+      <a href="#" class="btn btn-primary">Agregar al carrito</a>
+      </div>
+  </div>
   `;
   contenedor.append(item);
 });
- */
+
+
+{/* <h3>Id: ${producto.id}</h3>
+    <h4>Producto: ${producto.nombre}</h4>
+    <p>$${producto.precio}</p> */}
