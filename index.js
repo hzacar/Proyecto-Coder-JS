@@ -113,3 +113,29 @@ buscador.addEventListener("submit", (e) => {
     contenedor.append(item);
   });
 });
+
+
+
+let carrito = [];
+let carritoStorage = JSON.parse(localStorage.getItem("carrito"));
+
+
+if(carritoStorage){
+  carrito = carritoStorage;
+}
+carrito.forEach(item => {
+  let div = document.createElement("div");
+  div.innerHTML = `
+    <div class="card col-md-3 prod" style="width: 20rem;">
+      <img src="img${producto.img}" class="card-img-top" alt="cortina de baño modelo simpson ducha">
+      <div  class="card-body">
+      <h3 class="card-title">$${producto.precio}</h3>
+      <h4 class="card-subtitle">${producto.nombre}</h4>
+      <p class="card-text">${producto.descripcion}</p>
+      <a href="#" class="btn btn-primary">Agregar al carrito</a>
+      </div>
+    </div>
+    `;
+
+  contenedor.append(div);
+});
