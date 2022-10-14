@@ -37,18 +37,18 @@ switch(mensual){
 
 let card = document.getElementById("contenedor");
 let productos = [
-  { img: "//simpducha.jpg", nombre: "Simpsons Ducha", precio: 4000, descripcion: "Cortina de baño tela teflonada. 180x180 cm" },
-  { img: "//simpsillon.jpg", nombre: "Simpsons Sillón", precio: 4000, descripcion: "Cortina de baño tela teflonada. 180x180 cm" },
-  { img: "//simpfamilia.jpg", nombre: "Simpsons Familia", precio: 4000, descripcion: "Cortina de baño tela teflonada. 180x180 cm" },
-  { img: "//tefparis.jpg", nombre: "Paris Torre ", precio: 3750, descripcion: "Cortina de baño tela teflonada. 180x180 cm" },
-  { img: "//tefsavon.jpg", nombre: "Savon de la Violette", precio: 3750, descripcion: "Cortina de baño tela teflonada. 180x180 cm" },
-  { img: "//tefbici.jpg", nombre: "Bicicleta", precio: 3750, descripcion: "Cortina de baño tela teflonada. 180x180 cm" },
-  { img: "//simexducha.jpg", nombre: "Simpsons Ducha Plástica", precio: 1450, descripcion: "Cortina de baño plástica extra gruesa" },
-  { img: "//simexhom.jpg", nombre: "Simpsons Homero Plástica", precio: 1450, descripcion: "Cortina de baño plástica extra gruesa" },
-  { img: "//simexfamilia.jpg", nombre: "Simpsons Familia Plástica", precio: 1450, descripcion: "Cortina de baño plástica extra gruesa" },
-  { img: "//gansimp.jpg", nombre: "Ganchos The Simpsons", precio: 2250, descripcion: "12 ganchos de resina diseño The Simpsons" },
-  { img: "//ganban.jpg", nombre: "Ganchos resina diseño bañera", precio: 1950, descripcion: "12 ganchos de resina diseño bañera" },
-  { img: "//ganmet.jpg", nombre: "Ganchos metálicos roller", precio: 1200, descripcion: "12 unidaddes de ganchos metálicos roller" },
+  { id: 1, img: "//simpducha.jpg", nombre: "Simpsons Ducha", precio: 4000, descripcion: "Cortina de baño tela teflonada. 180x180 cm" },
+  { id: 2, img: "//simpsillon.jpg", nombre: "Simpsons Sillón", precio: 4000, descripcion: "Cortina de baño tela teflonada. 180x180 cm" },
+  { id: 3, img: "//simpfamilia.jpg", nombre: "Simpsons Familia", precio: 4000, descripcion: "Cortina de baño tela teflonada. 180x180 cm" },
+  { id: 4, img: "//tefparis.jpg", nombre: "Paris Torre ", precio: 3750, descripcion: "Cortina de baño tela teflonada. 180x180 cm" },
+  { id: 5, img: "//tefsavon.jpg", nombre: "Savon de la Violette", precio: 3750, descripcion: "Cortina de baño tela teflonada. 180x180 cm" },
+  { id: 6, img: "//tefbici.jpg", nombre: "Bicicleta", precio: 3750, descripcion: "Cortina de baño tela teflonada. 180x180 cm" },
+  { id: 7, img: "//simexducha.jpg", nombre: "Simpsons Ducha Plástica", precio: 1450, descripcion: "Cortina de baño plástica extra gruesa" },
+  { id: 8, img: "//simexhom.jpg", nombre: "Simpsons Homero Plástica", precio: 1450, descripcion: "Cortina de baño plástica extra gruesa" },
+  { id: 9, img: "//simexfamilia.jpg", nombre: "Simpsons Familia Plástica", precio: 1450, descripcion: "Cortina de baño plástica extra gruesa" },
+  { id: 10, img: "//gansimp.jpg", nombre: "Ganchos The Simpsons", precio: 2250, descripcion: "12 ganchos de resina diseño The Simpsons" },
+  { id: 11, img: "//ganban.jpg", nombre: "Ganchos resina diseño bañera", precio: 1950, descripcion: "12 ganchos de resina diseño bañera" },
+  { id: 12, img: "//ganmet.jpg", nombre: "Ganchos metálicos roller", precio: 1200, descripcion: "12 unidaddes de ganchos metálicos roller" },
 ];
 
 productos.forEach((producto) => {
@@ -60,7 +60,7 @@ productos.forEach((producto) => {
       <h3 class="card-title">$${producto.precio}</h3>
       <h4 class="card-subtitle">${producto.nombre}</h4>
       <p class="card-text">${producto.descripcion}</p>
-      <a href="#" class="btn btn-primary">Agregar al carrito</a>
+      <a id="producto.id" href="#" class="btn btn-primary">Agregar al carrito</a>
       </div>
   </div>
   `;
@@ -138,4 +138,14 @@ carrito.forEach(item => {
     `;
 
   contenedor.append(div);
+});
+
+let boton = document.getElementById("producto.id");
+boton.addEventListener("click", () => {
+  Swal.fire({
+    title: "Producto seleccionado",
+    text: "Confirmas para que se agregue al carrito?",
+    icon: "success",
+    confirmButtonText: "Confirmar",
+  });
 });
