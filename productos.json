@@ -1,0 +1,86 @@
+[
+{
+    "id": 1,
+    "nombre": "Simpsons Ducha",
+    "precio": 4000,
+    "img": "//simpducha.jpg",
+    "descripcion": "Cortina de baño tela teflonada. 180x180 cm"
+},
+{
+    "id": 2,
+    "nombre": "Simpsons Sillón",
+    "precio": 4000,
+    "img": "//simpsillon.jpg",
+    "descripcion": "Cortina de baño tela teflonada. 180x180 cm"
+},
+{
+    "id": 3,
+    "nombre": "Simpsons Familia",
+    "precio": 4000,
+    "img": "//simpfamilia.jpg",
+    "descripcion": "Cortina de baño tela teflonada. 180x180 cm"
+},
+{
+    "id": 4,
+    "nombre": "Paris torre",
+    "precio": 3750,
+    "img": "//tefparis.jpg",
+    "descripcion": "Cortina de baño tela teflonada. 180x180 cm"
+},
+{
+    "id": 5,
+    "nombre": "Savon de la Violette",
+    "precio": 3750,
+    "img": "//tefsavon.jpg",
+    "descripcion": "Cortina de baño tela teflonada. 180x180 cm"
+},
+{
+    "id": 6,
+    "nombre": "Bicicleta",
+    "precio": 3750,
+    "img": "//tefbici.jpg",
+    "descripcion": "Cortina de baño tela teflonada. 180x180 cm"
+},
+{
+    "id": 7,
+    "nombre": "Simpsons Ducha Plástica",
+    "precio": 1450,
+    "img": "//simexducha.jpg",
+    "descripcion": "Cortina de baño plástica extra gruesa"
+},
+{
+    "id": 8,
+    "nombre": "Simpsons Homero plástica ",
+    "precio": 1450,
+    "img": "//simexhom.jpg",
+    "descripcion": "Cortina de baño plástica extra gruesa"
+},
+{
+    "id": 9,
+    "nombre": "Simpsons Familia plástica",
+    "precio": 1450,
+    "img": "//simexfamilia.jpg",
+    "descripcion": "Cortina de baño plástica extra gruesa"
+},
+{
+    "id": 10,
+    "nombre": "Ganchos The Simpsons",
+    "precio": 2250,
+    "img": "//gansimp.jpg",
+    "descripcion": "12 ganchos de resina diseño The Simpsons"
+},
+{
+    "id": 11,
+    "nombre": "Ganchos Resina diseño bañera",
+    "precio": 1950,
+    "img": "//ganban.jpg",
+    "descripcion": "12 ganchos de resina diseño bañera"
+},
+{
+    "id": 12,
+    "nombre": "Ganchos métalico roller",
+    "precio": 1200,
+    "img": "//ganmet.jpg",
+    "descripcion": "12 ganchos metálicos roller"
+}
+]
