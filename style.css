@@ -1,3 +1,83 @@
 .prod{
     margin: 20px;
 }
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito{
+    display: none;
+}
+
+.submenu #carrito thead{
+    position: fixed;
+    background-color: rgb(199, 190, 190);
+}
+
+#vaciar-carrito {
+    color: black;
+    text-decoration: none;
+    top: 85px;
+    right: 50px;
+    position: fixed;
+    width: 418px;
+    background-color: rgb(199, 190, 190);
+    display: none;
+}
+
+
+.submenu:hover #carrito{
+    background-color: white;
+    border-radius: 4px;
+    display: block;
+    max-height: 500px;
+    min-width: 458px;
+    overflow-y: scroll;
+    position: absolute;
+    padding: 20px;
+    right:0;
+    top:100%;
+    z-index: 1;
+}
+
+.submenu:hover #vaciar-carrito {
+    display: block;
+}
+
+#lista-carrito th:last-child {
+    width: 40px;
+}
+
+.borrar-producto {
+    background-color: red;
+    border-radius: 100%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+a.borrar-producto:hover {
+    color: red;
+    background-color: white;
+    border: 1px solid red;
+    padding: 4px 9px;
+}
+
+#lista-carrito tbody {
+    margin-top: 20px;
+    display: block;
+}
+
+.productos-agregados {
+    width: 50%;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: blue;
+    background-color: rgb(199, 190, 190);
+    border-radius: 100%;
+    text-decoration: none;
+}
