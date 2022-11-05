@@ -1,5 +1,9 @@
 .prod{
-    margin: 20px;
+    margin: 15px;
+}
+
+.logoimg {
+    border-radius: 50%;
 }
 
 .submenu {
@@ -18,11 +22,10 @@
 #vaciar-carrito {
     color: black;
     text-decoration: none;
-    top: 85px;
-    right: 50px;
+    text-align: center;
     position: fixed;
-    width: 418px;
-    background-color: rgb(199, 190, 190);
+    width: 20%;
+    background-color: rgb(220, 220, 221);
     display: none;
 }
 
@@ -52,6 +55,7 @@
 .borrar-producto {
     background-color: red;
     border-radius: 100%;
+    margin: 10px;
     padding: 5px 10px;
     text-decoration: none;
     color: white;

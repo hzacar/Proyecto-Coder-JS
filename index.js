@@ -1,5 +1,3 @@
-import { productos } from './productos.js';
-
 const carrito = document.querySelector('#carrito');
 const contenedorProductos = document.getElementById('contenedor');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
@@ -10,8 +8,11 @@ const card = document.getElementById('contenedor');
 let articulosCarrito = [];
 let cantidadTotal = 0;
 
-
-document.addEventListener('DOMContentLoaded', cargarProductos);
+document.addEventListener('DOMContentLoaded', (e) => {
+	fetch('./productos.json')
+		.then((response) => response.json())
+		.then((result) => cargarProductos(result));
+});
 
 carrito.addEventListener('click', eliminarProducto); 
 
@@ -35,9 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
   })
 
-
-
-function cargarProductos() {
+  function cargarProductos(productos) {
 	productos.forEach((producto) => {
 		const div = document.createElement('div');
 		div.classList.add('producto');
@@ -53,11 +52,7 @@ function cargarProductos() {
     </div>
     `;
 		card.appendChild(div);
-	});
-
-}
-
-
+	});}
 
 contenedorProductos.addEventListener('click', (e) => {
 	e.preventDefault();
